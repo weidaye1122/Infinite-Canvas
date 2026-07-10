@@ -1,0 +1,26 @@
+{
+  "name": "infinite-canvas",
+  "version": "1.0.0",
+  "description": "Self-hostable Infinite Canvas with server-side persistence and multi-boards",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r run dev",
+    "build": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "lint:fix": "pnpm -r run lint:fix",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\" && pnpm -r run format",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "keywords": [
+    "excalidraw",
+    "drawing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+} 

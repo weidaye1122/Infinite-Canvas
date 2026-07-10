@@ -1,0 +1,20 @@
+services:
+  infinite-canvas:
+    container_name: weidaye1122_infinite-canvas
+    image: ghcr.io/weidaye1122/infinite-canvas:latest
+    ports:
+      - '4002:80' # Web client - change first number if needed
+      - '4001:4000' # Server API - matches original setup
+    volumes:
+      - data:/app/data
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+      - DB_PATH=/app/data/database.sqlite
+      - LOGIN_PASSWORD=change-this-password
+      - LOGIN_SESSION_SECRET=change-this-session-secret
+    restart: unless-stopped
+
+volumes:
+  data:
+    driver: local
